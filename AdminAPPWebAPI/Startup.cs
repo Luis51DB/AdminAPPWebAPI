@@ -34,6 +34,8 @@ namespace AdminAPPWebAPI
 
             services.ConfigureRepositoryWrapper();
 
+            services.ConfigureJWTTokenAuthentication();
+
             services.AddMvc();
         }
 
@@ -65,6 +67,8 @@ namespace AdminAPPWebAPI
             });
 
             app.UseStaticFiles();
+
+            app.UseAuthentication();
 
             app.UseMvc();
         }
