@@ -11,6 +11,8 @@ namespace Repository
         private IPantallaRepository _pantalla;
         private IOrdenCompraRepository _ordenCompra;
         private IOrdenCompraDetalleRepository _ordenCompraDetalle;
+        private IProductoRepository _producto;
+        private IProveedorRepository _proveedor;
 
         public IUsuarioRepository Usuario
         {
@@ -74,6 +76,32 @@ namespace Repository
                 }
 
                 return _ordenCompraDetalle;
+            }
+        }
+
+        public IProductoRepository Producto
+        {
+            get
+            {
+                if (_producto == null)
+                {
+                    _producto = new ProductoRepository(_repoContext);
+                }
+
+                return _producto;
+            }
+        }
+
+        public IProveedorRepository Proveedor
+        {
+            get
+            {
+                if (_proveedor == null)
+                {
+                    _proveedor = new ProveedorRepository(_repoContext);
+                }
+
+                return _proveedor;
             }
         }
 

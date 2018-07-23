@@ -11,5 +11,7 @@ namespace Contracts
         IPantallaRepository Pantalla { get; }
         IOrdenCompraRepository OrdenCompra { get; }
         IOrdenCompraDetalleRepository OrdenCompraDetalle { get; }
+        IProveedorRepository Proveedor { get; }
+        IProductoRepository Producto { get; }
     }
 }

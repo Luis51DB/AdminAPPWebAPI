@@ -17,6 +17,8 @@ namespace Entities
         public DbSet<Rol> Roles { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<OrdenCompra> OrdenesCompra { get; set; }
-        public DbSet<OrdenCompraDetalle> OrdenCompraDetalles { get; set; }        
+        public DbSet<OrdenCompraDetalle> OrdenCompraDetalles { get; set; }
+        public DbSet<Producto> Productos { get; set; }
+        public DbSet<Proveedor> Proveedores { get; set; }
     }
 }
