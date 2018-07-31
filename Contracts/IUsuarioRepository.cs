@@ -7,5 +7,6 @@ namespace Contracts
 {
     public interface IUsuarioRepository: IRepositoryBase<Usuario>
     {
+        Usuario GetUsuarioByEmail(Usuario user);
     }
 }
